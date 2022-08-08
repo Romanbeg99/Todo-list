@@ -5,11 +5,228 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-list</title>
-    <link>
-    <style></style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+        body {
+            font-family: Monda;
+            background-color: #E5E5E5;
+        }
+        .ellipse {
+            width: 500px;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .ellipse1, .ellipse2 {
+            background-color: #ACD4E1;
+            z-index: -1;
+        }
+        .ellipse3, .ellipse4 {
+            background-color: #C8E3EC;
+            z-index: -2;
+        }
+        .ellipse1 {
+            left: 400px;
+            top: -115px;
+        }
+        .ellipse2 {
+            left: -50px;
+            top: -200px;
+        }
+        .ellipse3 {
+            left: 390px;
+            top: -80px;
+        }
+        .ellipse4 {
+            left: 0px;
+            top: -150px;
+        }
+        main {
+            width: 830px;
+            margin: 0 auto;
+            position: relative;
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+        }
+        input{
+            display: block;
+            background-color: #A8D2A5;
+            margin: 20px 0;
+            width: 830px;
+            height: 40px;
+            border: 1px solid #A8D2A5;
+            font-size: 18px;
+        }
+        .add {
+            display: block;
+            margin: 10px auto;
+            width: 290px;
+            height: 60px;
+            border: 0;
+            border-radius: 25px;
+            background: linear-gradient(to right,#A8D2A5, #ACD4E1);
+        }
+        ul {
+            list-style-type: none;
+        }
+        .task {
+            border-bottom: 2px solid #3E3B3B;
+            display: flex;
+            align-items: center;
+        }
+        .head2 {
+            font-size: 18px;
+            width: 700px;
+        }
+        .linethrough {
+            text-decoration: line-through;
+            color: #C4C4C4;
+        }
+        .checkcircle, .greenpen, .trashred{
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            border: 0;
+        }
+        .checkcircledark {
+            background-image: url("src/icons/checkcircledark.svg");
+        }
+        .checkcirclegreen {
+            background-image: url("src/icons/checkcirclegreen.svg");
+        }
+        .greenpen {
+            background-image: url("src/icons/greenpen.svg");
+        }
+        .trashred {
+            background-image: url("src/icons/trashred.svg");
+        }
+        li > p {
+            font-size: 14px;
+        }
+        .iconline {
+            background-color: #ACD4E1;
+            padding-left: 80px;
+        }
+        
+        .iconline > svg {
+            margin: 30px 50px;
+        }
+    </style>
     <script>{"loading..."}</script>
 </head>
-<body>text
-    
+<body>
+    <main>
+        <div class="ellipse ellipse1"></div>
+        <div class="ellipse ellipse2"></div>
+        <div class="ellipse ellipse3"></div>
+        <div class="ellipse ellipse4"></div>
+        <h1>My Tasks</h1>
+        <form action="">
+            <input type="text" value="Title">
+            <input type="text" value="Description">
+            <button class="add">Add</button>
+        </form>
+        
+            
+            
+        <ul>
+            <li>
+                <div class="task">
+                    <button class="checkcircle checkcircledark"></button>
+                    <h2 class="head2">Task #1</h2>
+                    <button class="greenpen"></button>
+                    <button class="trashred"></button>
+                </div>
+                <p class="paragraph">Task #1 Description:</p>
+            </li>
+            <li>
+                <div class="task">
+                    <button class="checkcircle checkcircledark"></button>
+                    <h2 class="head2">Task #2</h2>
+                    <button class="greenpen"></button>
+                    <button class="trashred"></button>
+                </div>
+                <p class="paragraph">Task #2 Description:</p>
+            </li>
+            <li>
+                <div class="task">
+                    <button class="checkcircle checkcircledark"></button>
+                    <h2 class="head2">Task #3</h2>
+                    <button class="greenpen"></button>
+                    <button class="trashred"></button>
+                </div>
+                <p class="paragraph">Task #3 Description:</p>
+            </li>
+        </ul>
+        <div class="iconline">
+            
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 8V12" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 16H12.01" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 22C19.6569 22 21 20.6569 21 19C21 17.3431 19.6569 16 18 16C16.3431 16 15 17.3431 15 19C15 20.6569 16.3431 22 18 22Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.58997 13.51L15.42 17.49" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.41 6.50999L8.58997 10.49" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 7C20.6569 7 22 5.65685 22 4C22 2.34315 20.6569 1 19 1C17.3431 1 16 2.34315 16 4C16 5.65685 17.3431 7 19 7Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 7C5.65685 7 7 5.65685 7 4C7 2.34315 5.65685 1 4 1C2.34315 1 1 2.34315 1 4C1 5.65685 2.34315 7 4 7Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 21C20.6569 21 22 19.6569 22 18C22 16.3431 20.6569 15 19 15C17.3431 15 16 16.3431 16 18C16 19.6569 17.3431 21 19 21Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 21C5.65685 21 7 19.6569 7 18C7 16.3431 5.65685 15 4 15C2.34315 15 1 16.3431 1 18C1 19.6569 2.34315 21 4 21Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 18.415L14.905 18.4468" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.4188 14.905L19.4456 7" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.41882 14.905L4.44557 7" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 4.41504L15.905 4.44682" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.752 10.144H15.092L14.744 8.704H12.572V14.98L13.58 15.34V16H10.532V15.34L11.54 14.98V8.704H9.368L9.02 10.144H8.36V7.84H15.752V10.144Z" fill="#3E3B3B"/>
+                </svg>
+                <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.2273 2L27 2" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.40906 2V19.7778" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.2273 8.66669L23.5909 8.66669" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.2273 15.3333L20.1818 15.3333" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.2273 22H16.7727" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.40906 22L8.62318 16.2444" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.21411 22L1.99999 16.2444" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.125 6.25H5.20833H21.875" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.33337 6.24999V4.16666C8.33337 3.61413 8.55287 3.08422 8.94357 2.69352C9.33427 2.30282 9.86417 2.08333 10.4167 2.08333H14.5834C15.1359 2.08333 15.6658 2.30282 16.0565 2.69352C16.4472 3.08422 16.6667 3.61413 16.6667 4.16666V6.24999M19.7917 6.24999V20.8333C19.7917 21.3859 19.5722 21.9158 19.1815 22.3065C18.7908 22.6972 18.2609 22.9167 17.7084 22.9167H7.29171C6.73917 22.9167 6.20927 22.6972 5.81857 22.3065C5.42787 21.9158 5.20837 21.3859 5.20837 20.8333V6.24999H19.7917Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.4166 11.4583V17.7083" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.5834 11.4583V17.7083" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                          
+        </div>
+    </main>
+    <script>
+        var buttonCheckcircle = document.querySelector('.checkcircle');
+        var head2 = document.querySelector('.head2');
+        var paragraph = document.querySelector('.paragraph');
+        
+        buttonCheckcircle.addEventListener("click", a);
+
+        function a(){
+            if (buttonCheckcircle.classList.contains("checkcircledark")){
+                buttonCheckcircle.classList.remove("checkcircledark")
+                buttonCheckcircle.classList.add("checkcirclegreen")
+
+                head2.classList.add("linethrough");
+                paragraph.classList.add("linethrough");
+            }
+            else{
+                buttonCheckcircle.classList.remove("checkcirclegreen")
+                buttonCheckcircle.classList.add("checkcircledark")
+
+                head2.classList.remove("linethrough");
+                paragraph.classList.remove("linethrough");
+            }
+        }
+    </script>
 </body>
 </html>
